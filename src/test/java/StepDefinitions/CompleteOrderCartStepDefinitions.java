@@ -86,17 +86,20 @@ public class CompleteOrderCartStepDefinitions {
         js.executeScript("\"window.scrollBy(0,250)\"");
         Thread.sleep(1000);
 
-        Select countrySelect = new Select(checkoutPagePage.countryDropDownButton);
-        Random randomIndex = new Random();
-        countrySelect.selectByIndex(randomIndex.nextInt(20) + 1);
+        // Fill Address data if you don't have address
+        if (checkoutPagePage.countryDropDownButton.isDisplayed()) {
 
-        // Fill data
-        checkoutPagePage.city.sendKeys("Cairo");
-        checkoutPagePage.address1.sendKeys("Nasr City");
-        checkoutPagePage.address2.sendKeys("Helwan");
-        checkoutPagePage.zipCode.sendKeys("1253");
-        checkoutPagePage.phoneNumber.sendKeys("+025554885");
-        checkoutPagePage.faxNumber.sendKeys("459856");
+            Select countrySelect = new Select(checkoutPagePage.countryDropDownButton);
+            Random randomIndex = new Random();
+            countrySelect.selectByIndex(randomIndex.nextInt(20) + 1);
+
+            checkoutPagePage.city.sendKeys("Cairo");
+            checkoutPagePage.address1.sendKeys("Nasr City");
+            checkoutPagePage.address2.sendKeys("Helwan");
+            checkoutPagePage.zipCode.sendKeys("1253");
+            checkoutPagePage.phoneNumber.sendKeys("+025554885");
+            checkoutPagePage.faxNumber.sendKeys("459856");
+        }
 
         checkoutPagePage.continueButton.click();
         Thread.sleep(1000);

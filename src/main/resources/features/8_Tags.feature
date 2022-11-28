@@ -1,4 +1,8 @@
+@Smoke
 Feature: Select Tags
+
+  Background: User Login to WebSite
+    Given User Login with "Test5@Test.com" and "123456789"
 
   Scenario: User select different tags
 

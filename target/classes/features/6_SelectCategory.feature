@@ -1,4 +1,8 @@
+@Smoke
 Feature: Select Categories
+
+  Background: User Login to WebSite
+    Given User Login with "Test5@Test.com" and "123456789"
 
   Scenario: Hover the header menu and select random category then hover and open sub-category if found
 

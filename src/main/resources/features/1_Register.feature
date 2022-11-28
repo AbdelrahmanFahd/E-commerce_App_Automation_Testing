@@ -1,5 +1,6 @@
-Feature: Registration
 @Registration
+Feature: Registration
+
   Scenario:User register with valid data
     Given Click on Register Button
 
@@ -7,7 +8,7 @@ Feature: Registration
     When User Choose any Gender
     And User enter First name and Last name
     And User Select Date of Birth: Select [Day, Month, Year]
-    And User enter email: "Test1@Test.com"
+    And User enter email: "Test5@Test.com"
     #Company Details
     And User enter Company name
     #Your Password

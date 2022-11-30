@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.Random;
 
 public class Page {
 
@@ -74,6 +73,28 @@ public class Page {
 
     @FindBy(xpath = "//*[@id=\"checkout\"]")
     public WebElement checkoutButton;
+
+    @FindBy(xpath = "/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[1]/a")
+    public WebElement facebookButton;
+
+    @FindBy(xpath = "/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[2]/a")
+    public WebElement twitterButton;
+
+    @FindBy(xpath = "/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[4]/a")
+    public WebElement youtubeButton;
+
+    @FindBy(xpath = "/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[3]/a")
+    public WebElement rssButton;
+
+    @FindBy(xpath = "/html/body/div[6]/div[3]/div/div/div/div/div[1]/div[2]/a[1]")
+    public WebElement nokiaSlider;
+
+    @FindBy(xpath = "/html/body/div[6]/div[3]/div/div/div/div/div[1]/div[2]/a[2]")
+    public WebElement appleSlider;
+
+     @FindBy(xpath = "//*[@id=\"nivo-slider\"]/img")
+    public WebElement sliderImage;
+
 
 
 

@@ -5,15 +5,18 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 
 public class Follow {
 
     Page page;
+    Actions key;
 
     @Given("Scroll down to the bottom")
     public void home() throws InterruptedException {
         page = new Page(Hooks.driver);
+        key = new Actions(Hooks.driver);
         JavascriptExecutor js = (JavascriptExecutor) Hooks.driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         Thread.sleep(1000);
@@ -47,7 +50,7 @@ public class Follow {
     public void facebookAssertion() throws InterruptedException {
         Thread.sleep(2000);
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains("www.facebook.com/nopCommerce"));
+        softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains("nopcommerce"));
         softAssert.assertAll();
     }
 
@@ -55,7 +58,7 @@ public class Follow {
     public void twitterAssertion() throws InterruptedException {
         Thread.sleep(2000);
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains("twitter.com/nopCommerce"));
+        softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains("nopcommerce"));
         softAssert.assertAll();
     }
 
@@ -63,7 +66,7 @@ public class Follow {
     public void youtubeAssertion() throws InterruptedException {
         Thread.sleep(2000);
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains("www.youtube.com/user/nopCommerce"));
+        softAssert.assertTrue(Hooks.driver.getCurrentUrl().contains("nopcommerce"));
         softAssert.assertAll();
 
     }

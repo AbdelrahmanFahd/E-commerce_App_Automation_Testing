@@ -2,7 +2,7 @@
 Feature: Add products to Compare List
 
   Background: User Login to WebSite
-    Given User Login with "Test5@Test.com" and "123456789"
+    Given User Login with "Test10@Test.com" and "123456789"
 
   Scenario: user could add different products to compare list
     Given Scroll down and choose Apple MacBook and HTC One M8
